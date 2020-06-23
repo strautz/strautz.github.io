@@ -10,3 +10,5 @@ Gemeinsam mit seiner Jugendliebe Qi'ra, trickste Han die Anführerin der Weißw�
 
 Han-Solo sagt:  
 >It’s the ship that made the Kessel run in less than twelve parsecs. I’ve outrun Imperial starships. Not the local bulk cruisers, mind you. I’m talking about the big Corellian ships, now. She’s fast enough for you, old man.
+<img src= "SDCC_15_-_Han_Solo_(19652877106).jpg">
+William Tung from USA / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0)
