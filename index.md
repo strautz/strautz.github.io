@@ -7,3 +7,6 @@ Gemeinsam mit seiner Jugendliebe Qi'ra, trickste Han die Anführerin der Weißw�
 * Pilot des Millennium Falken
 * Freund von Luke Skywalker
 * Später der Geliebte von Leya
+
+Han-Solo sagt:  
+>It’s the ship that made the Kessel run in less than twelve parsecs. I’ve outrun Imperial starships. Not the local bulk cruisers, mind you. I’m talking about the big Corellian ships, now. She’s fast enough for you, old man.
