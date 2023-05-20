@@ -1,14 +1,24 @@
-# Han-Solo
+|[Home](index.md) | [Konzeption](konzeption.md) | [Kontakt](kontakt) | [Datenschutzerklärung](datenschutzerklaerung.md) | [Download](download.md) |  
+|--|--|--|--|--|
 
-Han Solo (* 32 VSY auf Corellia; † 34 NSY auf der Starkiller-Basis) war ein Schmuggler, Pilot des Millennium Falken und später General der Rebellenallianz. Hans Vater war ein Fabrikarbeiter in einem Raumhafen und baute corellianische YT-Frachter. Bereits in jungen Jahren erledigte Han als Waise für die Bande der Weißwürmer seine ersten kriminellen Aufträge.   
-Gemeinsam mit seiner Jugendliebe Qi'ra, trickste Han die Anführerin der Weißwürmer, Lady Proxima aus und den Beiden gelang es, aus der Knechtschaft der Weißwürmer zu fliehen. Han plante, zusammen mit Qi'ra Corellia zu verlassen, jedoch kam es nie dazu, denn den Schlägertrupps der Weißwürmer gelang es, Qi'ra wieder einzufangen. Um seine Freundin eines Tages aus den Fängen der Bande zu befreien, trat Han der Akademie des Galaktischen Imperiums bei, um Pilot zu werden. Von dem imperialen Offizier Drawd Munbrin, bekam Han den Nachnamen Solo zugewiesen.
 
-## Besondere Merkmale
-* Pilot des Millennium Falken
-* Freund von Luke Skywalker
-* Später der Geliebte von Leya
+## Kurvenprofi
+![Logo](/images/KS_breit.png)
 
-Han-Solo sagt:  
->It’s the ship that made the Kessel run in less than twelve parsecs. I’ve outrun Imperial starships. Not the local bulk cruisers, mind you. I’m talking about the big Corellian ships, now. She’s fast enough for you, old man.
-<img src= "SDCC_15_-_Han_Solo_(19652877106).jpg">
-William Tung from USA / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0)
+Mit Kurvenprofi können praktisch alle zweidimensionalen Grafen der Schulmathematik maßstabsgerecht gezeichnet werden. Das Programm hat viele interaktive Möglichkeiten (Tangente, Normale, Krümmung) um selbstständiges Lernen und experimentieren zu ermöglichen.
+
+# Besondere Eigenschaften:
+
+* Kostenfreie Vollversion für die private Nutzung oder die Nutzung in Schulen
+*Algebraische Ableitung und numerisches Integral
+*Zeichnen von beliebig vielen Graphen und Punkten abhängig von beliebig vielen Parametern
+*Viele neue Eigenschaften lassen die Nutzung für Blinde und Sehbehinderte zu.
+	* Ausgabe eines Tons, dessen Tonhöhe den y-Wert oder die Steigung des Graphen wiedergibt
+	* Ausgabe des Graphen als Text, der über die Baillezeile gelesen werden kann.
+* Polarkoordinatendarstellung
+* Parameterdarstellung
+* Verschiedene Regressionen
+* Unterstützung interaktiver Whiteboards
+* Rechenblatt für Matrizen und Gleichungssysteme
+* Der Ausdruck und die Kopie sind maßstabsgerecht.
+* Die ganze Anwendung lässt sich nach der Installation ohne Einschränkung auf einen Stick kopieren und von dort starten.
