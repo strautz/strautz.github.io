@@ -1,3 +1,4 @@
+
 |[Home](index.md) | [Konzeption](konzeption.md) | [Kontakt](kontakt) | [Datenschutzerklärung](datenschutzerklaerung.md) | [Download](download.md) |  
 |--|--|--|--|--|
 
@@ -10,9 +11,9 @@ Mit Kurvenprofi können praktisch alle zweidimensionalen Grafen der Schulmathema
 # Besondere Eigenschaften:
 
 * Kostenfreie Vollversion für die private Nutzung oder die Nutzung in Schulen
-*Algebraische Ableitung und numerisches Integral
-*Zeichnen von beliebig vielen Graphen und Punkten abhängig von beliebig vielen Parametern
-*Viele neue Eigenschaften lassen die Nutzung für Blinde und Sehbehinderte zu.
+* Algebraische Ableitung und numerisches Integral
+* Zeichnen von beliebig vielen Graphen und Punkten abhängig von beliebig vielen Parametern
+* Viele neue Eigenschaften lassen die Nutzung für Blinde und Sehbehinderte zu.
 	* Ausgabe eines Tons, dessen Tonhöhe den y-Wert oder die Steigung des Graphen wiedergibt
 	* Ausgabe des Graphen als Text, der über die Baillezeile gelesen werden kann.
 * Polarkoordinatendarstellung
