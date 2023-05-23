@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Matrix</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Bearbeiten.html">Bearbeiten</a></span></span><br /><br />
+<a name=".h0"></a><h2>Matrix</h2>
+Matrizen werden im Fenster &lt;Bearbeiten-Matrix&gt; in einer Tabelle behandelt.<br />
+An beliebiger Stelle können hier Zahlen oder Terme eingeben werden. Die Ergebnisse sind nach Möglichkeit in Bruchform.<br />
+<br />
+<b>Tipp</b>: Durch &lt;Bearbeiten-Sofort ausgeben&gt; können Sie festlegen, ob die Ausgaben sofort an vorgegebener Stelle oder erst nach Druck auf die Entertaste in einer anderen Zelle erfolgt.<br />
+<ol>
+<li />Dreiecksmatrix<br />
+Jede  Matrix kann durch Klicken und Ziehen markiert und in eine obere Dreiecksform gebracht werden.<br />
+
+<li />Diagonalisieren<br />
+Entsprechend der Dreiecksmatrix wird hier die Matrix so umgeformt, dass in der Hauptdiagonalen nur Einsen stehen.
+<li />Gleichungssystem<br />
+Aus den Koeffizienten des Gleichungssystems wird eine Matrix aufgestellt, die um den Ergebnisvektor ergänzt wird. Wird diese erweiterte Matrix diagonalisiert, kann die Lösung ganz rechts abgelesen werden.<br />
+</ol>
+Beispiel:<br />
+3x + y –z = 0<br />
+x + y + z = 2<br />
+x-y +2z = 1<br />
+<br />
+Matrix:<br />
+x   y   z<br />
+3   1   -1  0<br />
+1   1   1   2<br />
+1   -1  2   1<br />
+<br />
+Diagonalisiert:<br />
+x	y	z<br />
+1   0   0   0   =&gt; x=0<br />
+0   1   0   1   =&gt; y=1<br />
+0	0	1	1	=&gt; z=1<br />
+<ol>
+<li />Einheitsmatrix<br />
+Vereinfachte Eingabe einer Einheitsmatrix in dem markierten Bereich.<br />
+
+<li />Invertieren einer Matrix<br />
+Die Bestimmung der inversen Matrix ist wie im Rechnen auf dem Papier über die Diagonalisierung einer erweiterten Matrix realisiert. <br />
+Die quadratische Matrix wird mit Hilfe der Funktion Einheitsmatrix nach rechts um dieselbe Größe erweitert. Diese Rechteckmatrix wird diagonalisiert. Die rechte Hälfte ist dann die inverse Matrix.<br />
+
+<li />Determinante<br />
+Berechnung der Determinante einer quadratischen Matrix<br />
+
+<li />Matrizenmultiplikation<br />
+Zwei Matrizen werden wie bei der herkömmlichen Methode auf dem Papier schräg übereinander geschrieben. Die Spaltenzahl der ersten Matrix (grün) muss nur mit der Zeilenzahl der zweiten Matrix übereinstimmen. Die Produktmatrix wird im gelben Bereich ausgegeben.<br />
+
+<li />Transponierte Matrix<br />
+Die Zeilen und Spalten der markierten Matrix werden vertauscht.<br />
+
+<li />Skalarmultiplikation von Vektoren<br />
+Das Skalarprodukt der ersten beiden markierten Spaltenvektoren wird gebildet.<br />
+
+<li />Kreuzmultiplikation<br />
+Das Kreuzprodukt der ersten beiden markierten Spaltenvektoren wird gebildet. Die Zeilenzahl muss 3 sein.<br />
+</ol>
+<a name=".h2291"></a><h3>Differenzenschema (Kurzeinführung)</h3>
+<ul>Ein Differenzenschema wird gebildet, indem in einer Zeile immer die Differenz zweier aufeinander folgender Zahlen unter diese beiden Zahlen geschrieben wird. Dieser Vorgang wird in der 2. und den weiteren Zeilen wiederholt. Wenn die Zeile durch ein Polynom p(x) in der Form p(1); p(2); p(3);...p(n) gebildet wird, besteht die n-te Zeile nur noch aus der gleichen Zahl. Wenn schon in der m-ten Zeile eine konstante Folge auftritt, ist das bildende Polynom m-ten Grades. Die weiteren oder vorausgehenden Funktionswerte können durch Fortführung des Schemas ohne Kenntnis der Funktion gefunden werden. <br />
+</ul>
+<b>Bildung des Differenzenschemas</b><br />
+Die erste Zeile des Schemas wird eingeben, markiert und durch Klick auf Differenzenschema/Differenzenschema nach unten so weit fortgeführt, bis sich eine konstante Zeile ergibt.<br />
+<br />
+<b>Berechnung des bildenden Polynoms</b><br />
+Das ganze Schema ist durch die erste Spalte festgelegt. Daher kann das bildende Polynom durch die erste Spalte der Markierung berechnet werden. Differenzenschema/Polynom<br />
+    </body>
+</html>

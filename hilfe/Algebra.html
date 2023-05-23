@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Algebra</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Hauptfenster.html">Hauptfenster</a></span> | <span class="parent-node"><a href="KurvenprofiHilfe.html">KurvenprofiHilfe</a></span> | <span class="parent-node"><a href="Punkte.html">Punkte</a></span> | <span class="parent-node"><a href="Spur.html">Spur</a></span> | <span class="parent-node"><a href="v500.html">v500</a></span></span><br /><br />
+<a name=".h0"></a><h2>Algebra</h2>
+Im Eingabefeld lassen sich alle Berechnungen ausführen und zusätzlich die Befehle die hier aufgeführt sind. Sie sind auch unter dem Knopf "Befehle" zu finden. Nach der Wahl werden die Felder [Term] usw. ausgewählt und sollen überschrieben werden. "=" springt zum nächsten Feld solange welche vorhanden sind. <br />
+Soll ein gezeichneter Funktionsterm eingetragen werden, kann dieser mit Pfeil-oben bzw. Pfeil-unten ausgewählt werden.<br />
+Terme oder sinnvolle Teile davon, die in der Ausgabe stehen können per Drag&amp;Drop auf das Schaubild gezogen werden. Dies funktioniert auch mit Punkten in der Schreibweise Punkt(34;23)<br />
+<br />
+<a name=".h623"></a><h3>Integral</h3>
+<b>integral([Term];[von];[bis])</b><br />
+Die Berechnung des Integrals erfolgt numerisch nach der Simpsonschen Fassregel.<br />
+<br />
+Im Schaubild kann die eingeschlossen Fläche zwischen zwei Graphen bestimmt werden, indem in die entsprechende Fläche geklickt und im Kontextmenü "eingeschlossene Fläche" und die gewünschte Farbe gewählt wird.<br />
+Die gewählte Fläche ist abhängig<ul>
+<li />vom Spurmodus - dann wird immer die Fläche zur x-Achse bestimmt.
+<li />vom Steigungsdreieck - hiermit können die Grenzen festgelegt werden.<br />
+</ul>
+Das Ergebnis der Integration erscheint dann in "Terme".<br />
+<br />
+<a name=".h1187"></a><h3>Nullstellen, Schnittpunkte und Definitionslücken</h3>
+<b>suchenullstelle</b><br />
+Mit Auswahl der Nullstellensuche wird mit Hilfe der Tangente abhängig von der Position des Kreuzes eine Nullstelle gesucht (Newtonverfahren). <br />
+Dieses Verfahren besteht darin, bei einem Näherungswert x0 den Graphen durch eine Tangente zu ersetzen und den Schnittpunkt mit der x-Achse zu bestimmen.<br />
+Dies geschieht mit der Formel: x1=x0 - f(x0)/ f '(x0).<br />
+Dieser Schritt ist mit Tangente nachvollziehbar und muss einige Male durchgeführt werden, bis die gewünschte Genauigkeit erreicht ist.<br />
+<br />
+<b>nullstellen([Term])</b><br />
+Berechnet die (meisten) Nullstellen nach dem Newton-Verfahren ausgehend von 10 Stellen innerhalb des Ausschnitts.<br />
+Die gefundenen Stellen können bei Bedarf per Drag&amp;Drop als Senkrechte ins Schaubild übernommen werden. <br />
+<br />
+<b>definitionslücken([Term])</b><br />
+Abhängig von der aktuellen Funktion werden alle Nullstellen/Definitionslücken in dem gewählten Ausschnitt nach dem Newtonverfahren gesucht und in die Liste eingetragen. <br />
+Wenn die Nullstellen sehr nah beieinander liegen, kann es passieren, dass sie nicht gefunden werden. Dann bitte zoomen und noch einmal probieren.<br />
+<br />
+<b>schnittpunkt([Term1];[Term2])</b><br />
+Wie bei "Nullstellen" werden im dargestellten Ausschnitt einige Stellen als Startpunkt für die Suche nach den Schnittpunkten verwendet.<br />
+<br />
+<a name=".h2501"></a><h3>Taylorentwicklung</h3>
+<b>taylor([Term];[Stelle];[Grad]))</b><br />
+Die Taylorentwickung einer Funktion wird abhängig von der Entwicklungsstelle und dem maximalen Grad der Reihenglieder ausgegeben.<br />
+<br />
+<a name=".h2687"></a><h3>Ableitung</h3>
+<b>ableitung([Term])</b><br />
+Algebraische Ableitung<br />
+<br />
+<a name=".h2744"></a><h3>Tangente / Normale</h3>
+<b>tangente([Term];[Stelle])</b><br />
+<b>normale([Term];[Stelle])</b><br />
+Zur Funktion wird die Tangente oder Normale an der gegebenen Stelle berechnet.<br />
+<br />
+<a name=".h2901"></a><h3>Krümmungskreis</h3>
+<b>krümmung([Term];[Stelle])</b><br />
+Ausgegeben wird der Mittelpunkt des Krümmungskreises an der angegebenen Stelle. Auch diese Ausgabe kann per Drag&amp;Drop direkt auf das Schaubild gezogen werden. Der Kreis wird dann angezeigt.<br />
+<br />
+<a name=".h3138"></a><h3>Gehe zu</h3>
+<b>gehezu([x-Wert];[y-Wert])</b><br />
+Das Kreuz wird zum angegebenen Punkt versetzt und das Bild falls nötig verschoben.<br />
+Dies bietet eine Alternative zum Anklicken per Maus, da der gewünschte Punkt exakt getroffen wird.<br />
+Im Modus Spur wird der y-Wert ignoriert und der Punkt auf den aktuellen Graphen gesetzt.<br />
+<br />
+<a name=".h3449"></a><h3>Regression</h3>
+<a name="regression"></a><b>reg(...)</b><br />
+Es kann für alle eingetragenen Punkte eine <ul>
+<li />lineare reg(lin)
+<li />exponentielle reg(exp)
+<li />logarithmische reg(log)
+<li />inverse reg(inv)
+<li />proportionale reg(prop)
+<li />antiproprotionale reg(aprop)
+<li />oder geometrische Regression reg(geo) </ul>
+(Ausgleichsfunktion) durchgeführt werden. <br />
+<b>reg(löschen)</b> entfernt die Regressionskurve aus dem Schaubild.<br />
+Bei <span class="wiki-link"><a href="Terme.html">Terme</a></span> kann der Regressionsterm durch einen Rechtsklick eingefügt werden.<br />
+Im Ergebnisbereich werden die Gleichung und die wichtigsten Kenngrößen angegeben. <br />
+Der <b>Korrelationskoeffizient</b> r gibt an, ob die gewählte Regression sinnvoll ist. <br />
+Ein negatives r bedeutet eine negative Steigung; ein positives eine positive Steigung bei Geraden.<br />
+Je näher der Betrag des r bei 1 liegt, desto besser ist die Regression.<br />
+<br />
+<a name=".h4276"></a><h3>individuelle Regression</h3>
+<a name="individuelleRegression"></a>Es ist eine Punktmenge gezeichnet, für die die Regression durchgeführt werden soll. Dann erstelle eine Funktion mit Parametern, die die gesuchte Funktionsschar darstellt. <br />
+Z. B. sven*(x+lars)^2+peter<br />
+Nicht vergessen, die Parameter sven, lars und peter einzutragen.<br />
+Dann findet sich unter Steuerung/Algebra der Knopf &lt;Befehle&gt; und dort &lt;Regression&gt; &lt;individuell&gt; und &lt;Monte Carlo&gt;. Nun werden unter 1000 Zufallskombinationen die Parameter herausgesucht, bei denen die Summe der quadratischen Fehler am kleinsten ist. Dieser Wert wird evtl. mehrfach ausgegeben, wenn eine bessere Kombination gefunden wird.<br />
+Zum "Feinjustieren" gibt es den Befehl reg(1)... reg(6). Hier wird nacheinander an allen Parametern gedreht, bis sich bei der eingestellten Feinheit keine Änderung mehr ergibt. Lieber die Schritte einhalten! :-)<br />
+<br />
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Punkte</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+    </head>
+    <body>
+<span class="parent-nodes">parent nodes: <span class="parent-node"><a href="Einstellungen.html">Einstellungen</a></span> | <span class="parent-node"><a href="KurvenprofiHilfe.html">KurvenprofiHilfe</a></span></span><br /><br />
+<a name=".h0"></a><h2>Punkte</h2>
+In dieser Tabelle können die Koordinaten für beliebig viele Punkte eingegeben werden. In der dritten Spalte steht bei Bedarf eine Benennung dieser Punkte und ggf. besondere Steuerzeichen.<br />
+<br />
+Neu: Für interaktive Whiteboards (z. B. Smartboard) kann mit Doppelklick ein kleines Tastenfeld aktiviert werden, mit dem die aktuelle Zelle bearbeitet wird.<br />
+<br />
+Mit den folgenden Steuerzeichen kann der Punkt verändert werden:<br />
+<br />
+<a name=".h425"></a><h2>Steuerzeichen		Beispiel</h2>
+<table border="2">
+<tr><td>#k</td><td>	kein Kreuz z. B. #kNormalparabel (Für Überschriften oder Beschriftungen)</td></tr>
+<tr><td>#(TERM)</td><td>	setze den aus TERM berechneten Wert ein. Der Term muss grundsätzlich in Klammern stehen. #(t+7)</td></tr>
+<tr><td>#x bzw. #y </td><td>	aktueller x bzw. y Wert	(#x / #y)</td></tr>
+<tr><td>#s</td><td>Strecke: Verbindet den Punkt mit dem vorhergehenden in der Liste</td></tr>
+<tr><td>#v</td><td>verbinde Punktschar:kann nur verwendet werden, wenn der Punkt von einem Parameter abhängig ist. Glatteres Bild als #s, da Zwischenstellen berechnet werden.</td></tr>
+<tr><td>#r=(TERM)</td><td>Zeichne Kreis um den Punkt mit Radius des berechneten Terms #r=(pi/4) oder #r=(t+1). Der Term muss in Klammern stehen</td></tr>
+<tr><td>#r=(Termx; Termy)</td><td>	Zeichne eine Ellipse um den Punkt.	</td></tr>
+<tr><td>#g=(ZAHL)</td><td>ZAHL ist Schriftgröße des Textes	#g=(24)</td></tr>
+<tr><td>##f=(Arial)</td><td>Verwendung einer installierten Schriftart</td></tr>
+<tr><td>#p</td><td>	Polarkoordinaten: Die Koordinaten sind Winkel (phi) und Radius (r) 	</td></tr>
+<tr><td>#zeiger(r;phi)</td><td>	Zeiger mit der Länge R und der Phasenverschiebung phi.	#zeiger(2;t*pi/4)</td></tr>
+<tr><td>#qfehler</td><td>Die Summe der Quadrate der Abstände zwischen den Punkten und der aktuellen Funktion. Wichtiger Wert für die Güte einer Regression. Beachte: Dieser Punkt wird mitgezählt, sollte also einer der zu untersuchenden Punktmenge sein.</td></tr>
+</table>
+Der Zeiger kann auch weitere Argumente haben, um die Interferenz in der Physik zu zeigen: Die Drehung des Zeigers hängt weiterhin von dem Abstand zu einem Punkt (x,y) und der Wellenlänge lambda ab.<br />
+Komplette Syntax: #zeiger(radius; phi; x; y; lambda)<br />
+Siehe dazu auch die Beispiele unter Hilfe-Beispiele-Physik<br />
+<br />
+<a name=".h1913"></a><h3>Hinweis für Streckenzug und Punktschar</h3>
+<ul>
+<li />Wenn eine Parameterdarstellung mit einem Parameter im Modus Funktionenschar gezeichnet wird, sind die einzelnen Punkte getrennt. Mit dem Zeichen "#v" oder "#s" in der Beschriftung werden die Punkte verbunden.
+<li />Der Unterschied zwischen #s und #v besteht darin, dass bei #s die Punkte direkt verbunden werden und bei #v weitere Zwischenpunkte ohne Kreuz verbunden werden um eine glattere Kurve zu erhalten.<br />
+</ul>
+<a name=".h2373"></a><h3>Regression:</h3>
+Auf der Karte <span class="wiki-link"><a href="Algebra.html">Algebra</a></span> kann aus einer Vielzahl von Regressionen eine Ausgleichskurve für eine Punktmenge gesucht werden.<br />
+<br />
+<a name=".h2511"></a><h3>Parameterkurven:</h3>
+Parameterkurven sind die Menge der Punkte P(x, y) wobei x und y Funktionen eines Parameters z. B. "t" sind. Beispiele:<ol>
+<li />x=t^2  y=2t-t^2/2
+<li />x=sqrt(t)*cos(t)  y=sqrt(t)*sin(t)</ol>
+Die Parameterkurve ist zu sehen, wenn die Funktionenschar eingeschaltet wird und bei der Beschriftung des Punktes "#v" steht.<br />
+<br />
+<a name=".h2847"></a><h3>Beispiel einer Ortskurve:</h3>
+Gegeben ist die Parabelschar  mit <img src="volatile/tmpjbyzf7.gif" border="0" align="bottom" alt="formula" />. <ul>Eintragen des Terms x^2+t*x+t</ul>
+Die Scheitelpunkte sind bei <img src="volatile/tmpj0ik3y.gif" border="0" align="bottom" alt="formula" /><ul>Eintragen des Punktes:x= -t/2;  y= -t^2/4+t; Text: t= #t (evtl. auch"#v")</ul>
+Jetzt sollte eine Parabel mit markiertem Scheitelpunkt zu sehen sein. Der Scheitelpunkt ist mit dem aktuellen t-Wert beschriftet.<br />
+Wenn die Parabelschar gezeichnet wird (Funktionenschar strg+f) wird die Ortskurve des Scheitelpunktes mitgezeichnet.    </body>
+</html>
