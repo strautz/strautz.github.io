@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+  <title>Sch&uuml;lerfachwahl</title>
+  <link rel='stylesheet' type='text/css' href='css/fachwahl.css'/>
+  <script type="text/javascript" src="js/config.js"></script>
+  <script type="text/javascript" src="js/fachwahl.js"></script>
+  <script type="text/javascript" src="js/pruefenbw.js"></script>
+  <script type="text/javascript" src="js/pruefenmv.js"></script>
+  <script type="text/javascript" src="js/pruefenni.js"></script>
+  <script type="text/javascript" src="js/pruefensn.js"></script>
+  <script type="text/javascript" src="js/pruefenst.js"></script>
+  <script type="text/javascript" src="js/pruefenth.js"></script>
+</head>
+
+<body>
+  <form id="form" enctype="multipart/form-data" action="speichern.php" method="post" onsubmit="return PruefenVorSpeichern()">
+   <fieldset>
+     <legend id="legendtitle">Indiware Sch&uuml;lerfachwahl</legend>
+     <div class="boxfachwahl">
+       <div class="divzeile">
+         <label class="labellinks" for="nachname">Nachname:</label>
+         <input type="text" name="nachname" id="nachname" />
+       </div>
+       <div class="divzeile">
+         <label class="labellinks" for="vorname">Vorname:</label>
+         <input type="text" name="vorname" id="vorname" />
+       </div>
+       <div class="divzeile">
+         <label class="labellinks" for="klasse">Klasse:</label>
+         <select id="klasse" name="boxklasse" size="1">
+           <option>Klasse ausw&auml;hlen</option>
+         </select>
+       </div>
+       <div class="divzeile" id="zeileprofil">
+         <label class="labellinks" for="profil">Schwerpunkt:</label>
+         <select id="profil" title="Schwerpunkt" name="boxschwerpunkt" size="1" onchange="SchwerpunktWechsel()">
+           <option>Schwerpunkt ausw&auml;hlen</option>
+         </select>
+       </div>
+       <div id="bereich_faecher"></div>
+       <div class="divzeile">
+         <input type="button" value="Pr&uuml;fen" id="buttonpruefen" name="pruefen" onclick="DatenPruefen()"/>
+         <input type="submit" value="Speichern" id="buttonspeichern" name="speichern" onclick="ButtonSpeichernClick()"/>
+         <input type="button" value="Formular leeren" id="buttonleeren" name="leeren" onclick="FormularLeeren()"/>
+       </div>
+       <div class="divzeile" id="divemail">
+         <input type="submit" value="E-Mail an Schule" id="buttonemail" onclick="ButtonEmailClick()"/>
+         <input type="text" id="inputemail" name="emailschule" />
+       </div>
+       <textarea id="fachwahl" name="fachwahl" rows="1" cols="50" ></textarea>
+       <input type="text" name="klasse" id="inputklasse" />
+     </div>
+     <div id="bereichpruefen">
+       <p id="pmitteilungen">Mitteilungen der Schule</p>
+       <textarea id="mitteilungen" readonly="readonly" name="mitteilungen" rows="10" cols="60"></textarea>
+       <p>Pr&uuml;fen</p>
+       <p id="fehlermeldung"></p>
+     </div>
+   </fieldset>
+   <div ><a href="https://www.hvf-bs.net/index.php?id=181">zurück zur Homepage</a></div>
+   <div id="divindiware"><a href="https://www.indiware.de">www.indiware.de</a></div>
+   
+  </form>
+  <script type="text/javascript">
+   FormularFuellen();
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* Style Sheet */
+
+html, body, form, fieldset { 
+  margin:0;
+  padding:0; 
+  }
+	
+body {
+  background: #fff;
+  color: #000;
+  font-size: 0.8em;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  }
+         
+form {
+  padding: 10px 15px 20px 15px;
+  }     
+
+legend {
+  margin-left: -2px;
+  color: #46c2ff;
+  font-size: 1.75em;
+  font-weight: bold;
+  font-variant: small-caps;
+  }
+         
+#divindiware {
+  width: 920px;
+  text-align:center;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-variant: small-caps;
+  }
+
+#divindiware a {
+  color: #46c2ff;
+  }
+         
+fieldset { 
+  width: 920px;
+  overflow: auto;
+  padding: 0px 20px 20px 20px;
+  border: 1px solid #46c2ff;
+  }
+
+.boxfachwahl {  
+  padding-top: 10px;
+  float: left;
+  width: 520px;
+  }
+  
+.divzeile {
+  height: 24px;
+  width: 500px;
+  float: left;
+  margin-top: 3px;
+  }
+  
+#nachname,#vorname { 
+  width: 275px;
+  height: 17px;
+  }
+  
+#klasse {
+  width: 80px;
+  height: 23px;
+  }
+  
+#profil {
+  height: 23px;
+  }
+  
+.labellinks { 
+  padding-top:2px;
+  width: 100px;
+  margin: 0px 0 0 0;
+  float: left;
+  }
+
+.divcheck { 
+  padding:1px;
+  float: left;
+  min-width: 50px;
+  }
+  
+.divstunden { 
+  padding:1px;
+  padding-top:2px;
+  float: left;
+  width: 60px;
+  }
+
+.labelstunden { 
+  float: left;
+  text-align:right;
+  width: 25px;
+  }
+
+#labelseminarfach {
+  padding-left:100px;
+  float: left;
+  width: 280px;
+  }
+  
+#labelseminarfachst {
+  padding-left:58px;
+  float: left;
+  text-align:right;
+  }
+  
+.divstundengesamt { 
+  padding:1px;
+  padding-left:435px;
+  float: left;
+  width: 100px;
+  }
+  
+.labelstundengesamt { 
+  float: left;
+  text-align:right;
+  width: 25px;
+  font-weight:bold;
+  }
+
+#inputklasse {
+  display:none;
+  }
+  
+#fachwahl {
+  display:none;
+  }
+  
+.inputbox { 
+  float: left;
+  margin-left:10px;
+  wwidth: 10px;
+  }
+	
+.selectfach { 
+  float: left;
+  height: 23px;
+  width: 280px;
+  margin-right:0px;
+  }
+
+#submit {
+  width: 90px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  }
+
+input:focus, select:focus {	
+  background-color: #c4ecff;
+  }
+  
+#buttonspeichern {
+  width: 120px;
+  }
+
+#buttonpruefen { 
+  width: 120px;
+  display:none;
+  }
+  
+#buttonleeren { 
+  width: 120px;
+  }
+  
+#buttonemail {
+  width: 120px;
+  }
+
+#inputemail { 
+  width: 360px;
+  }
+
+#bereichpruefen {  
+  padding-top: 0px;
+  float: left;
+  width: 390px;
+  }
+
+#mitteilungen {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.0em;
+  width: 390px;
+  }
+
+#ulpruefen {
+  list-style-type: decimal;
+  }
