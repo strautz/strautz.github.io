@@ -239,7 +239,7 @@ function DatenPruefenNi() {
     if (scfach[i]>-1)
       if (scbelegung[1][i]==0)
         if (scbelegung[2][i]==0)
-          fehler+='<li>Fach '+faecher[scfach[i]][0]+' wurde ausgew‰hlt, aber in keinem Schuljahr belegt.</li>';
+          fehler+='<li>Fach '+faecher[scfach[i]][0]+' wurde ausgew√§hlt, aber in keinem Schuljahr belegt.</li>';
     }
 
   //Fach mehrfach belegt  
@@ -296,37 +296,37 @@ function DatenPruefenNi() {
           fehler+='<li>Fach '+sfa+' darf nicht nur im 2. Schuljahr belegt werden.</li>';
     }
 
-  //Pr¸fungsfach nicht belegt  
+  //Pr√ºfungsfach nicht belegt  
   for (var i=1; i<=cMaxPr5 ; i++) {
     if (scfach[i-1]==-1)
-      fehler+='<li>Pr¸fungsfach '+i+' nicht belegt.</li>';
+      fehler+='<li>Pr√ºfungsfach '+i+' nicht belegt.</li>';
     }
 
-  //Pr¸fungsfach P1-P3 unzul‰ssig
+  //Pr√ºfungsfach P1-P3 unzul√§ssig
   for (var i=1; i<=3 ; i++) {
     if (scfachart[i-1]==cNiFachartFSN)
-      fehler+='<li>Pr¸fungsfach '+i+' darf keine neu einsetzende Fremdsprache sein.</li>';
+      fehler+='<li>Pr√ºfungsfach '+i+' darf keine neu einsetzende Fremdsprache sein.</li>';
     }
 
-  //Pr¸fungsfach aus sprachl. Aufgabenfeld
+  //Pr√ºfungsfach aus sprachl. Aufgabenfeld
   menge=cNiFachmengeAfSpr;
   var anz=AnzahlFachartInPruefung(menge);
   if (anz==0)
-    fehler+='<li>Kein Pr¸fungsfach aus sprachl. Aufgabenfeld.</li>';
+    fehler+='<li>Kein Pr√ºfungsfach aus sprachl. Aufgabenfeld.</li>';
 
-  //Pr¸fungsfach aus gesellschaftswiss. Aufgabenfeld
+  //Pr√ºfungsfach aus gesellschaftswiss. Aufgabenfeld
   menge=cNiFachmengeAfGes;
   anz=AnzahlFachartInPruefung(menge);
   if (anz==0)
-    fehler+='<li>Kein Pr¸fungsfach aus gesellschaftswiss. Aufgabenfeld.</li>';
+    fehler+='<li>Kein Pr√ºfungsfach aus gesellschaftswiss. Aufgabenfeld.</li>';
 
-  //Pr¸fungsfach aus naturwiss. Aufgabenfeld
+  //Pr√ºfungsfach aus naturwiss. Aufgabenfeld
   menge=cNiFachmengeAfNat;
   anz=AnzahlFachartInPruefung(menge);
   if (anz==0)
-    fehler+='<li>Kein Pr¸fungsfach aus naturwiss. Aufgabenfeld.</li>';
+    fehler+='<li>Kein Pr√ºfungsfach aus naturwiss. Aufgabenfeld.</li>';
 
-  //2 der 3 F‰cher Deutsch, Fremdsprache und Mathematik m¸ssen Pr¸fungsfach sein
+  //2 der 3 F√§cher Deutsch, Fremdsprache und Mathematik m√ºssen Pr√ºfungsfach sein
   anz=0;
   menge=[cNiFachartDE];
   if (AnzahlFachartInPruefung(menge)>0) 
@@ -338,56 +338,56 @@ function DatenPruefenNi() {
   if (AnzahlFachartInPruefung(menge)>0) 
     anz++;
   if (anz<2)
-    fehler+='<li>2 der 3 F‰cher Deutsch, Fremdsprache und Mathematik m¸ssen Pr¸fungsfach sein.</li>';
+    fehler+='<li>2 der 3 F√§cher Deutsch, Fremdsprache und Mathematik m√ºssen Pr√ºfungsfach sein.</li>';
 
-  //Mathematik nicht durchg‰ngig belegt
+  //Mathematik nicht durchg√§ngig belegt
   menge=[cNiFachartMA];
   anz=AnzahlFachartInFachwahl(menge,3,0);
   if (anz==0)
-    fehler+='<li>Mathematik nicht durchg‰ngig belegt.</li>';
+    fehler+='<li>Mathematik nicht durchg√§ngig belegt.</li>';
 
-  //Deutsch nicht durchg‰ngig belegt
+  //Deutsch nicht durchg√§ngig belegt
   menge=[cNiFachartDE];
   anz=AnzahlFachartInFachwahl(menge,3,0);
   if (anz==0)
-    fehler+='<li>Deutsch nicht durchg‰ngig belegt.</li>';
+    fehler+='<li>Deutsch nicht durchg√§ngig belegt.</li>';
     
-  //Keine Naturwissenschaft durchg‰ngig belegt
+  //Keine Naturwissenschaft durchg√§ngig belegt
   menge=cNiFachmengeNat;
   anz=AnzahlFachartInFachwahl(menge,3,0);
   if (anz==0)
-    fehler+='<li>Keine Naturwissenschaft durchg‰ngig belegt.</li>';
+    fehler+='<li>Keine Naturwissenschaft durchg√§ngig belegt.</li>';
     
-  //Keine weitere Naturwissenschaft oder Informatik (3-st¸ndig) durchg‰ngig belegt
+  //Keine weitere Naturwissenschaft oder Informatik (3-st√ºndig) durchg√§ngig belegt
   if (scschwerpunkt==cNiSchwerpunktNat) {
     menge=cNiFachmengeNatIf;
     anz=AnzahlFachartInFachwahl(menge,3,0);
     if (anz<2)
-      fehler+='<li>Keine weitere Naturwissenschaft oder Informatik (3-st¸ndig) durchg‰ngig belegt.</li>';
+      fehler+='<li>Keine weitere Naturwissenschaft oder Informatik (3-st√ºndig) durchg√§ngig belegt.</li>';
     }
 
-  //Keine fortgef¸hrte Fremdsprache durchg‰ngig belegt
+  //Keine fortgef√ºhrte Fremdsprache durchg√§ngig belegt
   menge=cNiFachmengeFS;
   anz=AnzahlFachartInFachwahl(menge,3,0);
   if (anz==0)
-    fehler+='<li>Keine Fremdsprache durchg‰ngig belegt.</li>';
+    fehler+='<li>Keine Fremdsprache durchg√§ngig belegt.</li>';
 
-  //Keine weitere Fremdsprache durchg‰ngig belegt
+  //Keine weitere Fremdsprache durchg√§ngig belegt
   if (scschwerpunkt==cNiSchwerpunktSpr) {
     menge=cNiFachmengeFS;
     anz=AnzahlFachartInFachwahl(menge,3,0);
     if (anz<2)
-      fehler+='<li>Keine weitere Fremdsprache durchg‰ngig belegt.</li>';
+      fehler+='<li>Keine weitere Fremdsprache durchg√§ngig belegt.</li>';
     }
 
-  //Keine weitere Naturwissenschaft oder Informatik (3-st¸ndig) oder Fremdsprache in 2 Schulhalbjahren belegt
+  //Keine weitere Naturwissenschaft oder Informatik (3-st√ºndig) oder Fremdsprache in 2 Schulhalbjahren belegt
   if (scschwerpunkt==cNiSchwerpunktGes || scschwerpunkt==cNiSchwerpunktSpo) {
     menge=cNiFachmengeFS;
     menge=menge.concat(cNiFachmengeNatIf);
     var anz1=AnzahlFachartInFachwahl(menge,3,1);
     var anz2=AnzahlFachartInFachwahl(menge,3,2);
     if (anz1<3 && anz2<3)
-      fehler+='<li>Keine weitere Naturwissenschaft oder Informatik (3-st¸ndig) oder Fremdsprache in 2 Schulhalbjahren belegt.</li>';
+      fehler+='<li>Keine weitere Naturwissenschaft oder Informatik (3-st√ºndig) oder Fremdsprache in 2 Schulhalbjahren belegt.</li>';
     }
 
   //Religion, Werte und Normen oder Philosophie muss zwei Halbjahre eines Schuljahres belegt werden
@@ -425,26 +425,26 @@ function DatenPruefenNi() {
   if (anz1+anz2==0)
     fehler+='<li>Kunst oder Musik oder Darstellendes Spiel muss zwei Halbjahre belegt werden.</li>';
 
-  //Kunst oder Musik oder Darstellendes Spiel muss als Erg‰nzungsfach zwei Halbjahre belegt werden
+  //Kunst oder Musik oder Darstellendes Spiel muss als Erg√§nzungsfach zwei Halbjahre belegt werden
   if (scschwerpunkt==cNiSchwerpunktMus) {
     menge=cNiFachmengeKuMuDs;
     anz1=AnzahlFachartInFachwahl(menge,2,1);
     anz2=AnzahlFachartInFachwahl(menge,2,2);
     if (anz1+anz2<3)
-      fehler+='<li>Kunst oder Musik oder Darstellendes Spiel muss als Erg‰nzungsfach zwei Halbjahre belegt werden.</li>';
+      fehler+='<li>Kunst oder Musik oder Darstellendes Spiel muss als Erg√§nzungsfach zwei Halbjahre belegt werden.</li>';
     }
 
-  //Sport muss durchg‰ngig belegt werden
+  //Sport muss durchg√§ngig belegt werden
   menge=[cNiFachartSP];
   anz=AnzahlFachartInFachwahl(menge,2,0);
   if (anz==0)
-    fehler+='<li>Sport muss durchg‰ngig belegt werden.</li>';
+    fehler+='<li>Sport muss durchg√§ngig belegt werden.</li>';
 
-  //Seminarfach muss durchg‰ngig belegt werden
+  //Seminarfach muss durchg√§ngig belegt werden
   menge=[cNiFachartSF];
   anz=AnzahlFachartInFachwahl(menge,2,0);
   if (anz==0)
-    fehler+='<li>Seminarfach muss durchg‰ngig belegt werden.</li>';
+    fehler+='<li>Seminarfach muss durchg√§ngig belegt werden.</li>';
 
   //
   anz=SchuelerMindestEinbringung();
