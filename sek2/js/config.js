@@ -23,9 +23,9 @@ confStundenMax[1]=0;
 confStundenMax[2]=0;
 
 //Schwerpunkte
-var schwerpunkte = new Array("sprachlich","musisch-künstlerisch","gesellschaftswissenschaftlich","math.-naturwissenschaftlich","");
+var schwerpunkte = new Array("sprachlich","musisch-k&uuml;nstlerisch","gesellschaftswissenschaftlich","math.-naturwissenschaftlich","");
 
-//Fächer
+//F&auml;cher
 var cMaxFach=48;
 var faecher=new Array(cMaxFach);
 faecher[0]=new Array("AG-As","AG Astronomie Geophysik",26,0,0);
@@ -42,11 +42,11 @@ faecher[10]=new Array("DE","Deutsch",1,5,3);
 faecher[11]=new Array("DS","Darstellendes Spiel",6,0,3);
 faecher[12]=new Array("EK","Erdkunde",9,5,3);
 faecher[13]=new Array("EN","Englisch",2,5,3);
-faecher[14]=new Array("FR","Französisch",2,5,3);
-faecher[15]=new Array("FRN","Französisch neu",3,0,4);
+faecher[14]=new Array("FR","Franz&ouml;sisch",2,5,3);
+faecher[15]=new Array("FRN","Franz&ouml;sisch neu",3,0,4);
 faecher[16]=new Array("GE","Geschichte",8,5,3);
 faecher[17]=new Array("GR","Griechisch",2,0,3);
-faecher[18]=new Array("HE","Hebräisch",2,0,3);
+faecher[18]=new Array("HE","Hebr&auml;isch",2,0,3);
 faecher[19]=new Array("IF","Informatik",21,5,3);
 faecher[20]=new Array("IT","Italienisch",2,0,3);
 faecher[21]=new Array("ITN","Italienisch neu",3,0,4);
@@ -56,9 +56,9 @@ faecher[24]=new Array("LA","Latein",2,5,3);
 faecher[25]=new Array("LW","Latein (Wahlfach)",2,0,2);
 faecher[26]=new Array("MA","Mathematik",17,5,3);
 faecher[27]=new Array("MU","Musik",5,5,3);
-faecher[28]=new Array("NL","Niederländisch",2,0,3);
-faecher[29]=new Array("NLN","Niederländisch neu",3,0,4);
-faecher[30]=new Array("PA","Pädagogik",12,0,3);
+faecher[28]=new Array("NL","Niederl&auml;ndisch",2,0,3);
+faecher[29]=new Array("NLN","Niederl&auml;ndisch neu",3,0,4);
+faecher[30]=new Array("PA","P&auml;dagogik",12,0,3);
 faecher[31]=new Array("PH","Physik",18,5,3);
 faecher[32]=new Array("PL","Philosophie",11,5,3);
 faecher[33]=new Array("PO","Politik-Wirtschaft",7,5,3);
@@ -168,13 +168,13 @@ for (var i = 0; i <= cMaxSchwerpunkt; i++) {
 
 //Mitteilungen
 var mitteilungen=new Array(10);
-mitteilungen[0]="Die folgenden Fächer müssen, wenn sie nicht als P-Fach gewählt werden, mindestens in Q1 ODER Q2 ";
+mitteilungen[0]="Die folgenden F&auml;cher m&uuml;ssen, wenn sie nicht als P-Fach gew&auml;hlt werden, mindestens in Q1 ODER Q2 ";
 mitteilungen[1]="belegt werden:";
 mitteilungen[2]="- Geschichte und ";
 mitteilungen[3]="- Politik-Wirtschaft und ";
 mitteilungen[4]="- Kunst oder Musik oder Darstellendes Spiel und ";
 mitteilungen[5]="- evangelische Religionslehre oder katholische Religionslehre oder Werte und Normen.";
-mitteilungen[6]="Nur wenn die genannten Fächer freiwillig für Q1 UND Q2 gewählt werden, darf die maximale ";
-mitteilungen[7]="Stundensumme von 67 Stunden überschritten werden.";
+mitteilungen[6]="Nur wenn die genannten F&auml;cher freiwillig f&uuml;r Q1 UND Q2 gew&auml;hlt werden, darf die maximale ";
+mitteilungen[7]="Stundensumme von 67 Stunden &uuml;berschritten werden.";
 mitteilungen[8]="";
 mitteilungen[9]="";
