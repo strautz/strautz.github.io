@@ -64,17 +64,38 @@ fieldset {
 #klasse {
   width: 80px;
   height: 23px;
+  float: left;
   }
   
 #profil {
   height: 23px;
   }
+
+#labelq0 {
+  padding-right:93px;
+  }
   
 .labellinks { 
-  padding-top:2px;
+  padding-top:3px;
   width: 100px;
   margin: 0px 0 0 0;
   float: left;
+  }
+
+#labelpin { 
+  padding-top:2px;
+  padding-left:64px;
+  padding-right:5px;
+  margin: 0px 0 0 0;
+  float: left;
+  }
+
+#pin { 
+  padding-top:2px;
+  padding-left:5px;
+  width: 40px;
+  float: left;
+  height: 17px;
   }
 
 .divcheck { 

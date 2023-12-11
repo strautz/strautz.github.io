@@ -1,4 +1,4 @@
-var version='2.12';
+var version='2.2';
 var cMaxPr5=5;
 var datum = location.search;
 var fehler='';
@@ -35,6 +35,9 @@ function FormularFuellen() {
     obj.innerHTML=stitel+' (Th&uuml;ringen)';
     document.getElementById('zeileprofil').style.display="none";
     }
+  if (confBundesland=="ThBs") {
+    obj.innerHTML=stitel+' (Th&uuml;ringen BGY)';
+    }
   if (confBundesland=="Mv") {
     obj.innerHTML=stitel+' (Mecklenburg-Vorpommern)';
     document.getElementById('zeileprofil').style.display="none";
@@ -59,10 +62,19 @@ function FormularFuellen() {
     document.getElementById('buttonspeichern').style.display="none";
   if (confButtonEmail==0)  
     document.getElementById('divemail').style.display="none";
+  if (typeof confPin== 'undefined')  {
+    confPin=0;
+    }
+  if (confPin==0)  {
+    document.getElementById('labelpin').style.display="none";
+    document.getElementById('pin').style.display="none";
+    }
 
   var obj = document.getElementById('nachname');
   obj.onchange=function() {DatenPruefen();};
   var obj = document.getElementById('vorname');
+  obj.onchange=function() {DatenPruefen();};
+  var obj = document.getElementById('pin');
   obj.onchange=function() {DatenPruefen();};
 
   KlassenFuellen();
@@ -100,6 +112,10 @@ function ProfileFuellen() {
     var option = new Option(s,anz);
     obj.options[anz] = option;
     }
+  if (confBundesland!="Ni") {
+    document.getElementById('labelq1').style.display="none";
+    document.getElementById('labelq2').style.display="none";
+    }
   }
 
 function MitteilungenFuellen() {
@@ -131,7 +147,7 @@ function BereichFaecherFuellen() {
   var anzlk=0;
   var anzpr=0;
   if (confBundesland=="St") {
-    anzlk=2;
+    anzlk=3;
     anzpr=6;
     }  
   objdivbereich=document.getElementById("bereich_faecher");
@@ -169,7 +185,14 @@ function BereichFaecherFuellen() {
       if (i==9)
         s='GF7: (BIO)';
       }  
+    if (confBundesland=="St") {
+      if (i<=6)
+        s='Kernfach '+i+':';
+      }  
     if (confBundesland=="Th") {
+      s='Band '+i+':';
+      }  
+    if (confBundesland=="ThBs") {
       s='Band '+i+':';
       }  
     obj.innerHTML=s;
@@ -182,6 +205,7 @@ function BereichFaecherFuellen() {
     if (i<=anzlk)
       obj.style.backgroundColor="#fff0f0";
     obj.id='selectfach'+i;
+    objfach=obj;
     obj.onchange=function() {BereichStundenAktualisieren();DatenPruefen();};
     objdiv.appendChild(obj);
     
@@ -213,6 +237,9 @@ function BereichFaecherFuellen() {
       if (confBundesland=="Th") {
         obj.style.display="none";
         }
+      if (confBundesland=="ThBs") {
+        obj.style.display="none";
+        }
       if (confBundesland=="St") {
         if (i<=6)
           obj.style.display="none";
@@ -235,6 +262,10 @@ function BereichFaecherFuellen() {
         if (confBundesland=="Th") {
           obj.style.display="none";
           }
+      if (sj==2) 
+        if (confBundesland=="ThBs") {
+          obj.style.display="none";
+          }
       }
     objdiv.appendChild(objdivstunden);
       
@@ -254,7 +285,9 @@ function BereichFaecherFuellen() {
   obj.innerHTML='1.5';
   objdiv.appendChild(obj);
   if (confBundesland!="Th") {
-    objdiv.style.display="none";
+    if (confBundesland!="ThBs") {
+      objdiv.style.display="none";
+      }
     }
 
   objdiv=document.createElement("div");
@@ -284,6 +317,10 @@ function BereichFaecherFuellen() {
       if (confBundesland=="Th") {
         obj.style.display="none";
         }
+    if (sj==2) 
+      if (confBundesland=="ThBs") {
+        obj.style.display="none";
+        }
     }
   objdiv.appendChild(objdivstunden);
   objdivbereich.appendChild(objdiv);
@@ -303,6 +340,9 @@ function BereichFaecherAktualisieren() {
     sp=1;
     }
   if (confBundesland=="Th") {
+    sp=1;
+    }
+  if (confBundesland=="ThBs") {
     sp=1;
     }
   if (confBundesland=="Mv") {
@@ -344,6 +384,9 @@ function BereichStundenAktualisieren() {
   if (confBundesland=="Th") {
     sum1=1.5;
     }
+  if (confBundesland=="ThBs") {
+    sum1=1.5;
+    }
   for (var zeile = 1; zeile <= fachangebot[sp].length-1; zeile++) {
     var obj=document.getElementById('selectfach'+zeile);
     var sfa='';
@@ -352,6 +395,13 @@ function BereichStundenAktualisieren() {
       sfa=obj.options[obj.selectedIndex].text;
       sfa=FachLangformZuKurzform(sfa);
       fa=IndexFach(sfa);
+      if (confBundesland=="Mv") {
+        if (sfa=='BO') { 
+          objbox=document.getElementById('inputbox2'+zeile);
+          objbox.checked=false;
+          }
+        }
+        
       }
    
     var st1=FachStunden(sfa,zeile,1);
@@ -394,9 +444,22 @@ function FormularInUebergabe() {
   
   var obj = document.getElementById('klasse');
   var skl=obj.options[obj.selectedIndex].text;
-
+  var spin=document.getElementById('pin').value;
+  var code=''
+  var c=0;
+  var hash=0;
+  for (var i=0; i<spin.length; i++) {
+    c=spin.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + c;
+    hash |= 0; // Convert to 32bit integer
+    }
+  
   var sprofil="";
   if (confBundesland=="Ni") {
+    obj=document.getElementById('profil');
+    sprofil=obj.options[obj.selectedIndex].text;
+    }
+  if (confBundesland=="ThBs") {
     obj=document.getElementById('profil');
     sprofil=obj.options[obj.selectedIndex].text;
     }
@@ -406,6 +469,7 @@ function FormularInUebergabe() {
   s+='vorname='+document.getElementById('vorname').value+'\r\n';
   s+='klasse='+skl+'\r\n';
   s+='profil='+sprofil+'\r\n';
+  s+='pin='+hash+'\r\n';
   var anz=0;
   for (var i=1; i<=cMaxFachzeile ; i++) {
     var obj=document.getElementById('selectfach'+i);
@@ -489,9 +553,12 @@ function FachStunden(sfa,zeile,asj) {
     anzlk=2;
     }
   if (confBundesland=="St") {
-    anzlk=2;
+    anzlk=3;
     }
   if (confBundesland=="Th") {
+    anzlk=4;
+    }
+  if (confBundesland=="ThBs") {
     anzlk=4;
     }
   for (var i=0; i <= faecher.length-1; i++) {
@@ -550,6 +617,11 @@ function FormularInSchueler() {
 
   scschwerpunkt=1;
   if (confBundesland=="Ni") {
+    var obj=document.getElementById('profil');
+    var s=obj.options[obj.selectedIndex].text;
+    scschwerpunkt=schwerpunkte.indexOf(s)+1;
+    }
+  if (confBundesland=="ThBs") {
     var obj=document.getElementById('profil');
     var s=obj.options[obj.selectedIndex].text;
     scschwerpunkt=schwerpunkte.indexOf(s)+1;
@@ -613,6 +685,12 @@ function PruefenVorSpeichern() {
       return(false);
       }
     }
+  if (confBundesland=="ThBs") {
+    if (obj=document.getElementById('profil').selectedIndex<1) {
+      alert('Kein Schwerpunkt eingetragen.');
+      return(false);
+      }
+    }
     
   if (artemail==1) {
     if (document.getElementById('inputemail').value=="") {
@@ -625,9 +703,22 @@ function PruefenVorSpeichern() {
       }
     }
   
+  var spin=document.getElementById('pin').value;
+  if (spin.length>4) {
+    alert('PIN zu lang (max. 4 Zeichen).');
+    return(false);
+    }
+
+  for (var i=1; i<=spin.length; i++) {
+    c=spin.charCodeAt(i-1);
+    if (c<48 || c>57) {
+      alert('PIN darf nur aus Ziffern bestehen.');
+      return(false);
+      }
+    }
+   
   if (confirm("Daten werden gespeichert.")!=true)
     return(false);
-  
   
   FormularInUebergabe();
 
@@ -661,6 +752,12 @@ function DatenPruefen() {
     fehler+='<li>Keine Klasse eingetragen.</li>';
     }
 
+  var obj=document.getElementById('pin');
+  if (confPin!=0)
+    if (obj.value=="") {
+      fehler+='<li>Keine PIN eingetragen.</li>';
+      }
+
   if (confBundesland=="Bw") {
     DatenPruefenBw();
     }
@@ -675,6 +772,10 @@ function DatenPruefen() {
 
   if (confBundesland=="Th") {
     DatenPruefenTh();
+    }
+
+  if (confBundesland=="ThBs") {
+    DatenPruefenThBs();
     }
     
   if (confBundesland=="Mv") {

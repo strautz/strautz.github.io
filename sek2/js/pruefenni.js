@@ -217,6 +217,9 @@ function SchuelerMindestEinbringung() {
       if (scschwerpunkt!=cNiSchwerpunktMus) 
         continue;
       menge=cNiFachmengeKuMuDs;
+      minart=2;
+      if (AnzahlFachartInPruefung(menge)>=minart) 
+        continue;
       }
     sum+=emin;
     }
@@ -269,7 +272,7 @@ function DatenPruefenNi() {
 
   //nur im 1. Sj angeboten
   var sfa='';
-  for (var i=0; i<cMaxFachzeile ; i++) {
+  for (var i=5; i<cMaxFachzeile ; i++) {
     if (scfach[i]<0)
       continue;
     sfa=faecher[scfach[i]][0];

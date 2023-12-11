@@ -12,6 +12,7 @@
   <script type="text/javascript" src="js/pruefensn.js"></script>
   <script type="text/javascript" src="js/pruefenst.js"></script>
   <script type="text/javascript" src="js/pruefenth.js"></script>
+  <script type="text/javascript" src="js/pruefenthbs.js"></script>
 </head>
 
 <body>
@@ -32,12 +33,17 @@
          <select id="klasse" name="boxklasse" size="1">
            <option>Klasse ausw&auml;hlen</option>
          </select>
+         <label id="labelpin" for="pin">Sch&uuml;ler-PIN:</label>
+         <input type="text" class="inputpin" name="pin" id="pin" maxlength="4" autocomplete="off"/>
        </div>
        <div class="divzeile" id="zeileprofil">
          <label class="labellinks" for="profil">Schwerpunkt:</label>
          <select id="profil" title="Schwerpunkt" name="boxschwerpunkt" size="1" onchange="SchwerpunktWechsel()">
            <option>Schwerpunkt ausw&auml;hlen</option>
          </select>
+         <label class="labelq" id="labelq0"></label>
+         <label class="labelq" id="labelq1">Q1</label>
+         <label class="labelq" id="labelq2">Q2</label>
        </div>
        <div id="bereich_faecher"></div>
        <div class="divzeile">
@@ -59,9 +65,7 @@
        <p id="fehlermeldung"></p>
      </div>
    </fieldset>
-   <div ><a href="https://www.hvf-bs.net/index.php?id=181">zurück zur Homepage</a></div>
    <div id="divindiware"><a href="https://www.indiware.de">www.indiware.de</a></div>
-   
   </form>
   <script type="text/javascript">
    FormularFuellen();

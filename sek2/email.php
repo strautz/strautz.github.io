@@ -22,16 +22,18 @@ $empfaenger=trim($empfaenger);
 $empfaenger=strip_tags($empfaenger);
 $empfaenger=str_replace("/","_",$empfaenger);
 
-$betreff="Schülerfachwahl";
+$betreff="Fachwahl";
 $text=$output;
 
 $trenner = md5(uniqid(time()));
-$mailaddi="fachwahl";
+$mail_name="Fachwahl";
+$mail_address="noreply@indiware.de";
 $kopf="MIME-Version: 1.0\r\n";
-$kopf.="From: $mailaddi\n";
+$kopf.="From: $mail_name <$mail_address>\n";
 $kopf.= "Content-Type: multipart/mixed;\n\tboundary=$trenner\n";
 
-$rumpf = "\n";
+$rumpf  = "\n";
+$rumpf .= "Date: ". date("r") ."\r\n";
 $rumpf .= "MIME-Version: 1.0";
 $rumpf .= "\n";
 $rumpf .= "Content-Type: multipart/mixed; boundary=$trenner";
