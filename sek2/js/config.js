@@ -1,4 +1,4 @@
-var confZeit="19.12.2018 15:41";
+﻿var confZeit="19.12.2018 15:41";
 var confBundesland="Ni";
 var confVerordnung="Niedersachsen, Abitur ab 2021";
 var confVersion="5.02.004";

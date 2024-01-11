@@ -1,4 +1,4 @@
-var version='2.12';
+﻿var version='2.12';
 var cMaxPr5=5;
 var datum = location.search;
 var fehler='';
