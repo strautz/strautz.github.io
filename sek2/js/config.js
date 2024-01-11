@@ -141,13 +141,13 @@ for (var i = 0; i <= cMaxSchwerpunkt; i++) {
 
 //Mitteilungen
 var mitteilungen=new Array(10);
-mitteilungen[0]="Die folgenden Faecher muessen, wenn sie nicht als P-Fach gewaehlt werden, mindestens in Q1 ";
+mitteilungen[0]="Die folgenden Faecher müssen, wenn sie nicht als P-Fach gewählt werden, mindestens in Q1 ";
 mitteilungen[1]="belegt werden:";
 mitteilungen[2]="- Geschichte und ";
 mitteilungen[3]="- Politik-Wirtschaft und ";
 mitteilungen[4]="- Kunst oder Musik oder Darstellendes Spiel und ";
 mitteilungen[5]="- evangelische Religionslehre oder katholische Religionslehre oder Werte und Normen.";
-mitteilungen[6]="Nur wenn die genannten Fächer freiwillig zusaetzlich für Q2 gewählt werden, darf die maximale ";
+mitteilungen[6]="Nur wenn die genannten Fächer freiwillig zusätzlich für Q2 gewählt werden, darf die maximale ";
 mitteilungen[7]="Stundensumme von 67 Stunden überschritten werden.";
 mitteilungen[8]="";
 mitteilungen[9]="";

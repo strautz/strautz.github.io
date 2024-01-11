@@ -1,4 +1,4 @@
-var cNiSchwerpunktSpr=1;
+﻿var cNiSchwerpunktSpr=1;
 var cNiSchwerpunktMus=2;
 var cNiSchwerpunktGes=3;
 var cNiSchwerpunktNat=4;
